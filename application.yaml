@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/Kasacka/argoNet
     targetRevision: HEAD
     path: dev
+    directory:
+      recurse: true
+      exclude: 'appsettings.json'
   destination:
     server: https://kubernetes.default.svc
     namespace: globins
