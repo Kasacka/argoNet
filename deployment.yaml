@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: globi-app
-          image: kasacka/argonet-app:3.0
+          image: kasacka/argonet:1.1
           ports:
             - containerPort: 3000
