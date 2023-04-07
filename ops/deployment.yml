@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: argofish-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: argofish-app
+  template:
+    metadata:
+      labels:
+        app: argofish-app
+    spec:
+      containers:
+      - name: argofish-webserver
+        image: kasacka/argofish:2.0
+        ports:
+        - containerPort: 8080
