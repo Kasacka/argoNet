@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argofish-application
+  name: argo-application
   namespace: argocd
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
     repoURL: https://github.com/Kasacka/argoNet.git
     targetRevision: HEAD
     path: ./ops
-  destination:
+  destination: 
     server: https://kubernetes.default.svc
   syncPolicy:
     syncOptions:
