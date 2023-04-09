@@ -11,6 +11,7 @@ spec:
     path: ./ops
   destination: 
     server: https://kubernetes.default.svc
+    namespace: argofish
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
